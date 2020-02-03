@@ -1,0 +1,9 @@
+# importing the QR code module
+
+import qrcode
+code = qrcode.QRCode(version=1, box_size=10, border = 5)
+content = "Hi, this is Rahul. Welcome to have your own QR Code"
+code.add_data(content)
+code.make(fit = True)
+pic=code.make_image(fill = "black", back_colour = "white")
+pic.save("1.png")
